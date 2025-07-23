@@ -1,0 +1,12 @@
+--Make Test_framework a part of car submodule
+project Car_Impl_Ada is
+   for Main use ("main.adb");
+   for Object_Dir use "obj";
+
+   -- -g: includes debug info
+   -- -gnata: enables runtime checks
+   package Compiler is
+      for Default_Switches ("Ada") use ("-g", "-gnata");
+   end Compiler;
+
+end Car_Impl_Ada;
